@@ -1,0 +1,26 @@
+.form-container{
+  width: 350px;
+  height: 500px;
+  background: bisque;
+  margin-top: 20px;
+  margin-left: 380px
+}  
+.text-type{
+  margin: 35px;
+    width: 178px;
+    height: 35px;
+}
+.btn{
+  width: 80px;
+  height: 40px;
+}
+.list{
+  font-size: 20px;
+  position: relative;
+}
+.delete{
+   position: absolute;
+   right: 10px;
+   cursor: pointer;
+   display:block;
+}
