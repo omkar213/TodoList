@@ -56,7 +56,7 @@ class Todolist extends React.Component {
           className={`${item.editFlag ? "editInput" : "disabledInput"}`}
           onChange={(e) => this.handleListItemChange(e, item)}
         />
-        <button className="btn delete-btn" onClick={(e) => this.removeListItem(e, item)}>
+        <button className="btn delete-btn" onClick={(e) => this.removeListItem(e, key)}>
           Delete
         </button>
         {/* {this.showEditSave(item)} */}
@@ -88,9 +88,9 @@ class Todolist extends React.Component {
     this.setState({ items: newList });
   };
 
-  removeListItem = (e, item) => {
-    console.log({ e, item });
-    // filter out the item.key
+  removeListItem = (e, key) => {
+        const delTodos = this.state.items.filter(item => item !== item.key);
+        this.printListItem([...delTodos])
   };
 
   printList = () => {
